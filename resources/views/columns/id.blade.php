@@ -3,7 +3,7 @@
 @section('content')
   <div class="row">
     <h2>{{$column->headline}}</h2>
-    <p>{{$column->date}}</p>
-    <p>{{$column->body}}</p>
+    <p>{{ date('F d, Y', strtotime($column->date))}}</p>
+    <p>{!! $column->body !!}</p>
   </div>
 @endsection

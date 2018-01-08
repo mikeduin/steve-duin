@@ -16,7 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('columns', 'ColumnController@getIndex');
-Route::get('column/{id}', [
+
+Route::get('column/year/{year}', [
+  'uses' => 'ColumnController@columnsByYear',
+  'as' => 'column.year'
+]);
+
+Route::get('column/id/{id}', [
   'uses' => 'ColumnController@getColumn',
   'as' => 'column.id'
   ]);

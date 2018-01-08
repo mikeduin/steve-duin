@@ -1,8 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="">
+    <div class="row">
         This is the columns page
+    </div>
+    <div class="row">
+      <a href='{{ route('column.year', ['year' => 2002]) }}'>2002</a>
     </div>
     <br>
     @foreach($columns as $column)
