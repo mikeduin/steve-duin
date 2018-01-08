@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('columns', 'ColumnController@getIndex');
+Route::get('column/{id}', [
+  'uses' => 'ColumnController@getColumn',
+  'as' => 'column.id'
+  ]);

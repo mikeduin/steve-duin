@@ -7,8 +7,8 @@
     <br>
     @foreach($columns as $column)
       <div class="row">
-        <div class="col s8">
-          <span>{{$column['headline']}}</span>
+        <div class="col s12">
+          <a href='{{ route('column.id', ['id' => $column->id]) }}'>{{$column->headline}}</span>
         </div>
       </div>
     @endforeach
